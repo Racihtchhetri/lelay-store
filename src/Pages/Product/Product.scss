@@ -1,0 +1,140 @@
+.product{
+    padding: 20px 50px;
+    display: flex;
+    gap: 20px;
+
+    .left{
+flex: 1;
+display: flex;
+gap: 20px;
+
+.images{
+flex: 1;
+
+img{
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+}
+.mainImg{
+flex: 5;
+
+img{
+    width: 100%;
+    max-height: 550px;
+    object-fit: contain;
+}
+}
+    }
+
+    .right{
+flex: 1;
+display: flex;
+flex-direction: column;
+gap: 20px;
+padding: 0px 10px;
+
+h1{
+    margin: 0px;
+}
+
+.price{
+    font-size: 30px;
+    font-weight: 500;
+    color: #2879fe
+}
+.oldPrice{
+    text-decoration: line-through;
+}
+
+p{
+    margin: 0px;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.quantity{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    button{
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border: none;
+    }
+}
+.add{
+width: 250px;
+padding: 10px;
+background-color: #2879fe;
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 20px;
+cursor: pointer;
+border: none;
+font-weight: 500;
+}
+
+.links{
+    display: flex;
+    gap: 20px;
+
+    .item{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #2879fe;
+        font-size: 14px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 5px;
+    }
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: grey;
+    font-size: 14px;
+    margin-top: 30px;
+
+    hr{
+        width: 200px;
+        margin: 0;
+        border: 1px solid rgb(238, 237, 237);
+    }
+}
+    }
+    
+    hr{
+        width: 100%;
+        border: 1px solid rgb(238, 237, 237);
+    }
+}
+@media (max-width: 800px) {
+    .product{
+            display: block;
+    .left{
+        padding: 20px;
+        margin-bottom: 30px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        .images{
+            img{
+                height: 75px;
+            }
+        }
+    }
+    }
+}
