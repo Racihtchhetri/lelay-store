@@ -35,7 +35,7 @@ const Navbar = () => {
          
           <div className="icons">
           <div className="items">
-            <Link className="link" to="/addProductForm">SignUp</Link>
+            <Link className="link" to="/addProductForm">AddProducts</Link>
           </div>
         </div>
       </div>
