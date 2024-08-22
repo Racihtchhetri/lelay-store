@@ -8,13 +8,13 @@ const Navbar = () => {
       <div className="wrapper">
         <div className="left">
           <div className="item">
-            <Link className="link" to="/products/1">Women</Link>
+            <Link className="link" to="/women">Women</Link>
           </div>
           <div className="item">
-            <Link className="link" to="/products/2">Men</Link>
+            <Link className="link" to="/men">Men</Link>
           </div>
           <div className="item">
-            <Link className="link" to="/products/3">Kids</Link>
+            <Link className="link" to="/kids">Kids</Link>
           </div>
         </div>
 
@@ -35,7 +35,7 @@ const Navbar = () => {
          
           <div className="icons">
           <div className="items">
-            <Link className="link" to="/signup">SignUp</Link>
+            <Link className="link" to="/addProductForm">SignUp</Link>
           </div>
         </div>
       </div>

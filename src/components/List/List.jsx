@@ -2,27 +2,28 @@ import React, { useState, useEffect } from 'react';
 import Card from '../../components/Card/Card'; // Import Card component
 import './List.scss'; // Ensure you have the necessary styles
 
-const List = ({ catId, sort }) => {
+const List = ({ category, sort }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        // Construct URL with optional category parameter
-        const url = catId 
-          ? `http://localhost:5000/api/products?category=${catId}`
+        const url = category 
+          ? `http://localhost:5000/api/products?category=${encodeURIComponent(category)}`
           : 'http://localhost:5000/api/products';
-
+  
         const response = await fetch(url);
         const data = await response.json();
+  
         setProducts(data);
       } catch (error) {
         console.error('Error fetching products:', error);
       }
     };
-
+  
     fetchProducts();
-  }, [catId]); // Include catId in dependency array to refetch when it changes
+  }, [category]);
+  
 
   // Filter and sort products based on sort options
   const filteredProducts = products

@@ -1,111 +1,131 @@
-.card-link{
+.card-link {
   text-decoration: none;
 }
+
 .card {
-    width: 280px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow here */
-    transition: transform 0.2s, box-shadow 0.2s; /* Add transition for smooth shadow effect */
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow here */
+  transition: transform 0.2s, box-shadow 0.2s; /* Add transition for smooth shadow effect */
 
+  &:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+    transform: translateY(-5px); /* Slight lift on hover */
+  }
 
-    &:hover {
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
-      transform: translateY(-5px); /* Slight lift on hover */
-    }
-  
-    .image {
-      position: relative;
-      width: 100%;
-      height: 325px;
-      overflow: hidden;
-    }
-    
+  .image {
+    position: relative;
+    width: 100%;
+    height: 325px;
+    overflow: hidden;
+
     .mainImg {
       display: block;
       width: 100%;
-      height: 325px;
+      height: 100%; /* Adjusted to fill container height */
       transition: opacity 0.3s ease;
     }
-    
+
     .secondImg {
       position: absolute;
       top: 0;
       left: 0;
-      opacity: 0;
       width: 100%;
-      height: 325px;
+      height: 100%; /* Adjusted to fill container height */
+      opacity: 0;
       transition: opacity 0.3s ease;
-    }
-    
-    .secondImg.visible {
-      opacity: 1;
-    }
 
-      span{
-        position: absolute;
-        background-color: white;
-        color: teal;
-        padding: 3px 5px;
-        z-index: 3;
-        top: 5px;
-        left: 5px;
-        font-size: 500;
-        font-size: 12px;
+      &.visible {
+        opacity: 1;
       }
     }
 
-    h2{
-      font-weight: 400;
-      font-size: 16px;
-      margin: 0px 0px 0px 10px;
-      text-decoration: none;
-      color: black;
+    span {
+      position: absolute;
+      background-color: white;
+      color: teal;
+      padding: 3px 5px;
+      z-index: 3;
+      top: 5px;
+      left: 5px;
+      font-size: 12px;
     }
-    
-    .prices{
-      display: flex;
-      gap: 20px;
+  }
 
-      h3{
-        font-size: 18px;
-        font-weight: 500;
-        color: teal;
-        margin: 0px 0px 15px 10px;
+  h2 {
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0 0 0 10px;
+    color: black;
+  }
 
-        &:first-child{
-          color: grey;
-          text-decoration: line-through;
-        }
+  .prices {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 0 10px 15px 10px; /* Adjusted for spacing */
+
+    .sale-tag {
+      background-color: red;
+      color: white;
+      padding: 5px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 12px;
+      border-radius: 3px;
+    }
+
+    .old-price {
+      color: grey;
+      text-decoration: line-through;
+      font-size: 18px; /* Adjust font size as needed */
+    }
+
+    .new-price {
+      color: #2879fe;
+      font-weight: bold;
+      font-size: 18px; /* Adjust font size as needed */
+    }
+
+    h3 {
+      font-size: 18px;
+      font-weight: 500;
+      color: teal;
+      margin: 0;
+
+      &:first-child {
+        color: grey;
+        text-decoration: line-through;
       }
     }
-  
-  @media (max-width: 1275px) {
-
-    .card{
-      width: 220px;
-    }
   }
+}
 
-  @media (max-width: 950px) {
-
-    .card{
-      width: 180px;
-    }
+@media (max-width: 1275px) {
+  .card {
+    width: 220px;
   }
-  
-  @media (max-width: 800px) {
+}
 
-    .card{
-      width: 250px;
-    }
+@media (max-width: 950px) {
+  .card {
+    width: 180px;
   }
-  @media (max-width: 619px) {
+}
 
-    .card{
-      width: 300px;
-    }
+@media (max-width: 800px) {
+  .card {
+    width: 250px;
   }
+}
+
+@media (max-width: 619px) {
+  .card {
+    width: 300px;
+  }
+}
